@@ -2,8 +2,8 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 
-Summary:	Utils functions for netsurf
-Summary(pl.UTF-8):	Biblioteka pomocnicza dla netsurfa
+Summary:	Utility functions for NetSurf
+Summary(pl.UTF-8):	Biblioteka funkcji narzędziowych dla NetSurfa
 Name:		libnsutils
 Version:	0.0.1
 Release:	1
@@ -16,10 +16,10 @@ BuildRequires:	netsurf-buildsystem >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-libnsutils.
+Utility functions for NetSurf.
 
 %description -l pl.UTF-8
-libnsutils.
+Biblioteka funkcji narzędziowych dla NetSurfa.
 
 %package devel
 Summary:	libnsutils library headers
@@ -32,8 +32,8 @@ This package contains the include files and other resources you can
 use to incorporate libnsutils into applications.
 
 %description devel -l pl.UTF-8
-Pliki nagłówkowe pozwalające na używanie biblioteki libnsutils w swoich
-programach.
+Pliki nagłówkowe pozwalające na używanie biblioteki libnsutils w
+swoich programach.
 
 %package static
 Summary:	libnsutils static library
