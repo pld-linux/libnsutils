@@ -5,14 +5,14 @@
 Summary:	Utility functions for NetSurf
 Summary(pl.UTF-8):	Biblioteka funkcji narzędziowych dla NetSurfa
 Name:		libnsutils
-Version:	0.0.1
+Version:	0.0.2
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	2782ab67e722f6f61ba263f9ef5b858c
+# Source0-md5:	dc709c4ad14300d3e419331cb927beb2
 URL:		http://www.netsurf-browser.org/projects/libnsutils/
-BuildRequires:	netsurf-buildsystem >= 1.3
+BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,6 +51,7 @@ Statyczna biblioteka libnsutils.
 %setup -q
 
 %build
+export AR="%{__ar}"
 export CC="%{__cc}"
 export CFLAGS="%{rpmcflags}"
 export LDFLAGS="%{rpmldflags}"
@@ -68,6 +69,11 @@ export LDFLAGS="%{rpmldflags}"
 %endif
 
 %install
+export AR="%{__ar}"
+export CC="%{__cc}"
+export CFLAGS="%{rpmcflags}"
+export LDFLAGS="%{rpmldflags}"
+
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=%{_prefix} \
