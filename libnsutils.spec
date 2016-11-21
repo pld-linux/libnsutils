@@ -5,12 +5,12 @@
 Summary:	Utility functions for NetSurf
 Summary(pl.UTF-8):	Biblioteka funkcji narzędziowych dla NetSurfa
 Name:		libnsutils
-Version:	0.0.2
+Version:	0.0.3
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	dc709c4ad14300d3e419331cb927beb2
+# Source0-md5:	a6c86655cf6bffe5bb49e5d346679f3e
 URL:		http://www.netsurf-browser.org/projects/libnsutils/
 BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
