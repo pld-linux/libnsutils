@@ -16,10 +16,12 @@ BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Utility functions for NetSurf.
+Libnsutils provides a small number of useful utility routines which
+require platform-specific implementations.
 
 %description -l pl.UTF-8
-Biblioteka funkcji narzędziowych dla NetSurfa.
+Biblioteka libnsutils dostarcza trochę przydatnych funkcji
+narzędziowych, wymagających implementacji zależnych od platformy.
 
 %package devel
 Summary:	libnsutils library headers
@@ -98,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING
+%doc COPYING README
 %attr(755,root,root) %{_libdir}/libnsutils.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libnsutils.so.0
 
